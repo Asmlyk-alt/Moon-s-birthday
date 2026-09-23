@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Moon's Birthday🎀</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:linear-gradient(180deg,#ffd6e8,#ffeaf4);
+overflow:hidden;
+height:100vh;
+font-family:'Poppins',sans-serif;
+}
+
+.container{
+position:relative;
+width:100%;
+height:100vh;
+}
+
+.title{
+position:absolute;
+top:40px;
+width:100%;
+text-align:center;
+font-size:52px;
+font-family:'Great Vibes',cursive;
+color:#ff4d88;
+}
+
+.stars{
+position:absolute;
+width:100%;
+height:100%;
+}
+
+.star{
+position:absolute;
+width:4px;
+height:4px;
+background:white;
+border-radius:50%;
+animation:blink 2s infinite;
+}
+
+@keyframes blink{
+50%{
+opacity:.2;
+}
+}
+
+.rocket{
+position:absolute;
+left:-160px;
+bottom:180px;
+
+font-size:100px;
+
+animation:
+fly 10s linear forwards;
+}
+
+@keyframes fly{
+
+0%{
+transform:
+translate(0,0)
+rotate(20deg);
+}
+
+100%{
+transform:
+translate(1200px,-450px)
+rotate(20deg);
+}
+
+}
+
+.search{
+position:absolute;
+
+bottom:80px;
+
+width:100%;
+
+text-align:center;
+
+font-size:28px;
+
+color:#ff5b98;
+
+font-family:
+'Great Vibes';
+}
+
+.error{
+
+position:absolute;
+
+top:50%;
+
+left:50%;
+
+transform:
+translate(-50%,-50%);
+
+display:none;
+
+font-size:40px;
+
+text-align:center;
+
+color:#ff3366;
+
+font-family:
+'Poppins';
+
+animation:
+appear 1.5s;
+
+}
+
+.message{
+
+display:none;
+
+position:absolute;
+
+top:50%;
+
+left:50%;
+
+transform:
+translate(-50%,-50%);
+
+width:75%;
+
+padding:35px;
+
+background:
+rgba(255,255,255,.5);
+
+backdrop-filter:
+blur(12px);
+
+border-radius:
+30px;
+
+text-align:center;
+
+animation:
+fade 2s;
+
+}
+
+.message h2{
+
+font-family:
+'Great Vibes';
+
+font-size:58px;
+
+color:#ff4d88;
+
+margin-bottom:18px;
+
+}
+
+.message p{
+
+font-size:20px;
+
+line-height:1.9;
+
+color:#555;
+
+}
+
+@keyframes appear{
+
+from{
+opacity:0;
+}
+
+to{
+opacity:1;
+}
+
+}
+
+@keyframes fade{
+
+from{
+opacity:0;
+transform:
+translate(-50%,-30%);
+}
+
+to{
+opacity:1;
+transform:
+translate(-50%,-50%);
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="title">
+Mission: Find The Moon 🌙
+</div>
+
+<div class="stars"></div>
+
+<div class="rocket">
+🚀
+</div>
+
+<div class="search">
+Scanning the galaxy... Finding Moon... Wait 10 second...
+</div>
+
+<div class="error">
+Error: Can't find moon<br>
+Because it's Moon's Birthday 🎂🌙
+</div>
+
+<div class="message">
+
+<h2>Happy Birthday dear Aradhya💗</h2>
+
+<p>🥳🎉🎊Happy 15th Birthday dear bhalo moner bhodro cute innocent😇 Aradhya and all the best kalker exam er jonno. Ami jani na j tui puro ta porbi ki porbi na tai besi kichu likhe ni-
+I wish bhogoban tor sob iccha puro koruk ar protect koruk bad environment theke. And I hope j tui life onek successful hobi and enjoy kor Birthday girl but exam ache seta mathai rekhe. And once again happy Birthday Aruuuuuuu 🥰</p>
+
+</div>
+
+</div>
+
+<script>
+
+for(let i=0;i<70;i++){
+
+let s=document.createElement("div");
+
+s.className="star";
+
+s.style.left=
+Math.random()*100+"%";
+
+s.style.top=
+Math.random()*100+"%";
+
+document
+.querySelector(".stars")
+.appendChild(s);
+
+}
+
+setTimeout(()=>{
+
+document
+.querySelector(".search")
+.style.display="none";
+
+document
+.querySelector(".error")
+.style.display="block";
+
+},10000);
+
+setTimeout(()=>{
+
+document
+.querySelector(".error")
+.style.display="none";
+
+document
+.querySelector(".message")
+.style.display="block";
+
+},14000);
+
+</script>
+
+</body>
+</html>
